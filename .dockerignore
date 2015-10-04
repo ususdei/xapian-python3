@@ -1,0 +1,6 @@
+
+.git*
+Makefile
+xapian*
+src/
+pkg/
