@@ -29,11 +29,6 @@ pkgver() {
 
 prepare() {
 	cd "$srcdir/$_name"
-    local py_minor=$(python3 -c 'import sys;print(sys.version_info.minor)')
-    if [ "$py_minor" -ge 5 ]; then
-        sed -i -e "s/'module' object has no attribute/module 'xapian' has no attribute/" xapian-bindings/python3/smoketest.py
-        sed -i -e 's/.pyo/.opt-1.pyc/g' xapian-bindings/python3/Makefile.am 
-    fi
 }
 
 build() {
@@ -52,8 +47,6 @@ check() {
 
 package() {
 	cd "$srcdir/$_name"
-    #cp xapian-bindings/python3/xapian/__pycache__/__init__.cpython-35.{opt-1.pyc,pyo}
 	make DESTDIR="$pkgdir/" install
-    #mv $pkgdir/usr/lib/python3.5/site-packages/xapian/__init__.cpython-35.{pyo,opt-1.pyc}
 }
 

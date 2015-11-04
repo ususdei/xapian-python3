@@ -3,7 +3,7 @@ FROM base/archlinux
 
 MAINTAINER Markus Blöchl <blochl@in.tum.de>
 
-ENV ARCH_DATE 04.10.2015
+ENV ARCH_DATE 04.11.2015
 
 RUN pacman -Sy && \
     pacman-db-upgrade && \
