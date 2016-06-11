@@ -12,6 +12,7 @@ RUN pacman -S --noconfirm --needed --force \
     git \
     cmake \
     zlib \
+    doxygen \
     libutil-linux \
     help2man \
     graphviz \

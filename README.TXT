@@ -7,4 +7,4 @@ The result will appear in the current directory.
 
 Of course you can also just use the PKGBUILD alone.
 
-I only tested it with xapian 1.3.3 and python 3.5 for now.
+I only tested it with xapian 1.3.3 to 1.3.7 and python 3.5 for now.
