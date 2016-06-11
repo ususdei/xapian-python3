@@ -1,15 +1,11 @@
 
-FROM base/archlinux
+FROM archlinux
 
-MAINTAINER Markus Blöchl <blochl@in.tum.de>
+MAINTAINER Markus Blöchl <markus@blochl.de>
 
-ENV ARCH_DATE 04.11.2015
+ENV ARCH_DATE 11.16.2016
 
-RUN pacman -Sy && \
-    pacman-db-upgrade && \
-    pacman -S archlinux-keyring --noconfirm --force && \
-    pacman -Syu --noconfirm --force && \
-    pacman-db-upgrade
+RUN pacman -Syu --noconfirm --force
 
 RUN pacman -S --noconfirm --needed --force \
     base-devel \

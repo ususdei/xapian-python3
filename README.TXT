@@ -1,7 +1,8 @@
 
-This repo allowes one to build xapian with python3 and lua bindings from git for arch linux in a standard environment.
+This repo allowes one to build xapian with python3 and lua bindings from git for archlinux in a standard environment.
 
-`$ make`  will fire up a docker container running arch linux and build xapian from source.
+Make sure you have a recent archlinux image in your docker registry, otherwise use `$make archlinux` first.
+`$ make`  will then fire up a docker container running archlinux and build xapian from source.
 The result will appear in the current directory.
 
 Of course you can also just use the PKGBUILD alone.
